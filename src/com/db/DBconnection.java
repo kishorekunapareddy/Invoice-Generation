@@ -104,11 +104,7 @@ public class DBconnection {
 			t.setEmpId(rs.getInt(2));
 			t.setProId(rs.getInt(3));
 			t.setMonth(rs.getString(4));
-			t.setWeek1(rs.getString(5));
-			t.setWeek2(rs.getString(6));
-			t.setWeek3(rs.getString(7));
-			t.setWeek4(rs.getString(8));
-			t.setStatus(rs.getString(9));
+			t.setWeek(rs.getString(5));
 			tl.add(t);
 			
 		}
@@ -210,8 +206,9 @@ public class DBconnection {
 	  	ArrayList<Users> ul=new ArrayList<Users>();
         while(rs.next()){
         	Users u=new Users();
-        	u.setUserName(rs.getString(1));
-        	u.setPassword(rs.getString(2));
+        	u.setUserId(rs.getString(1));
+        	u.setUserName(rs.getString(2));
+        	u.setPassword(rs.getString(3));
         	ul.add(u);
         }
         return ul;
